@@ -1,0 +1,237 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Base Variables */
+  --radius: 0.625rem;
+
+  /* Cyberpunk Theme Colors */
+  --cyber-black: #000000;
+  --cyber-dark: #0a0c14;
+  --cyber-blue-bright: #18cef2; 
+  --cyber-blue: #1089bd; 
+  --cyber-blue-dark: #0b4a7d; 
+  --cyber-blue-glow: #38bdf8; 
+  --cyber-accent: #0ff4;
+
+  /* Background */
+  --background: var(--cyber-dark);
+  --foreground: #f2f2f2;
+
+  /* Card and popover elements */
+  --card: #111827;
+  --card-foreground: #f2f2f2;
+  --popover: #111827;
+  --popover-foreground: #f2f2f2;
+
+  /* Primary - Main blue */
+  --primary: var(--cyber-blue-bright);
+  --primary-foreground: var(--cyber-dark);
+
+  /* Secondary - Darker blue */
+  --secondary: var(--cyber-blue);
+  --secondary-foreground: #ffffff;
+
+  /* Accent - Light blue with glow */
+  --accent: var(--cyber-blue-glow);
+  --accent-foreground: var(--cyber-dark);
+
+  /* Muted elements */
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+
+  /* System colors */
+  --destructive: #ef4444;
+  --border: rgba(24, 206, 242, 0.2);
+  --input: rgba(24, 206, 242, 0.2);
+  --ring: var(--cyber-blue);
+
+  /* Chart colors - cyberpunk theme */
+  --chart-1: var(--cyber-blue-bright);
+  --chart-2: #3b82f6;
+  --chart-3: var(--cyber-blue);
+  --chart-4: #06b6d4;
+  --chart-5: #0284c7;
+
+  /* Sidebar colors */
+  --sidebar: var(--cyber-dark);
+  --sidebar-foreground: #f2f2f2;
+  --sidebar-primary: var(--cyber-blue-bright);
+  --sidebar-primary-foreground: var(--cyber-dark);
+  --sidebar-accent: var(--cyber-blue);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(24, 206, 242, 0.2);
+  --sidebar-ring: var(--cyber-blue);
+
+  /* Custom Cyberpunk UI Variables */
+  --cyber-grid-color: rgba(24, 206, 242, 0.05);
+  --cyber-glow-primary: rgba(24, 206, 242, 0.2);
+  --cyber-glow-strong: rgba(24, 206, 242, 0.5);
+  --cyber-line-color: rgba(24, 206, 242, 0.3);
+  --cyber-terminal-bg: rgba(0, 0, 0, 0.7);
+  --cyber-text-bright: #ffffff;
+  --cyber-text-muted: rgba(242, 242, 242, 0.7);
+  --cyber-text-dim: rgba(242, 242, 242, 0.5);
+}
+
+.dark {
+  /* Background */
+  --background: var(--cyber-dark);
+  --foreground: #f2f2f2;
+
+  /* Card and popover elements */
+  --card: #111827;
+  --card-foreground: #f2f2f2;
+  --popover: #111827;
+  --popover-foreground: #f2f2f2;
+
+  /* Primary - Main blue */
+  --primary: var(--cyber-blue-bright);
+  --primary-foreground: var(--cyber-dark);
+
+  /* Secondary - Darker blue */
+  --secondary: var(--cyber-blue);
+  --secondary-foreground: #ffffff;
+
+  /* Accent - Light blue with glow */
+  --accent: var(--cyber-blue-glow);
+  --accent-foreground: var(--cyber-dark);
+
+  /* Muted elements */
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+
+  /* System colors */
+  --destructive: #ef4444;
+  --border: rgba(24, 206, 242, 0.2);
+  --input: rgba(24, 206, 242, 0.2);
+  --ring: var(--cyber-blue);
+
+  /* Chart colors - cyberpunk theme */
+  --chart-1: var(--cyber-blue-bright);
+  --chart-2: #3b82f6;
+  --chart-3: var(--cyber-blue);
+  --chart-4: #06b6d4;
+  --chart-5: #0284c7;
+
+  /* Sidebar colors */
+  --sidebar: var(--cyber-dark);
+  --sidebar-foreground: #f2f2f2;
+  --sidebar-primary: var(--cyber-blue-bright);
+  --sidebar-primary-foreground: var(--cyber-dark);
+  --sidebar-accent: var(--cyber-blue);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(24, 206, 242, 0.2);
+  --sidebar-ring: var(--cyber-blue);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 12s linear infinite;
+}
+
+@keyframes sound-wave {
+  0% {
+    height: 10%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 10%;
+  }
+}
+
+.animate-sound-wave {
+  animation: sound-wave 1.2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
