@@ -396,3 +396,29 @@ const Footer = () => {
 export default Footer;
 
 ```
+
+# Voice Wave Animation
+
+```tsx
+              <div
+                className={`absolute inset-0 ${
+                  isSpeaking ? "opacity-30" : "opacity-0"
+                } transition-opacity duration-300`}
+              >
+                {/* Voice wave animation when speaking */}
+                <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-center items-center h-20">
+                  {[...Array(5)].map((_, i) => (
+                    <div
+                      key={i}
+                      className={`mx-1 h-16 w-1 bg-primary rounded-full ${
+                        isSpeaking ? "animate-sound-wave" : ""
+                      }`}
+                      style={{
+                        animationDelay: `${i * 0.1}s`,
+                        height: isSpeaking ? `${Math.random() * 50 + 20}%` : "5%",
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+```
